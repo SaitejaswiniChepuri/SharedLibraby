@@ -6,9 +6,19 @@ def call(String name = 'human') {
     pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Greetings') {
             steps {
                 echo 'Hello World'
+            }
+        }
+        stage('Speaking') {
+            steps {
+                echo 'How are you....!'
+            }
+        }
+        stage('Send off') {
+            steps {
+                echo 'Bye....!'
             }
         }
     }
