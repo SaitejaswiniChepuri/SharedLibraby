@@ -3,6 +3,8 @@
 def call(String name = 'human') {
     // In here default value is set to 'human'
     // echo "Hello, ${name}."
+
+    echo "Job '${env.JOB_BASE_NAME}' , '${env.BUILD_NUMBER}' , '${env.BUILD_URL}'"
     pipeline {
     agent any
     stages {
