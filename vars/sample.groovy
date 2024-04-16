@@ -17,7 +17,7 @@ def call(String name = 'human') {
             steps {
                 echo 'How are you....!'
                 // input message: 'Do you want to approve the deployment?', ok: 'Yes'
-                 step {
+                 steps {
                  emailext mimeType: 'text/html',
                  subject: "APPROVAL RQD[JENKINS] ${currentBuild.fullDisplayName}",
                  to: "chepurisaitejaswini@gmail.com",
