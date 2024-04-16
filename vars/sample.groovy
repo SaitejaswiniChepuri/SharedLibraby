@@ -19,10 +19,10 @@ def call(String name = 'human') {
                 // input message: 'Do you want to approve the deployment?', ok: 'Yes'
             }
             step {
-                 emailext mimeType: ‘text/html’,
-                 subject: “APPROVAL RQD[JENKINS] ${currentBuild.fullDisplayName}”,
+                 emailext mimeType: 'text/html',
+                 subject: "APPROVAL RQD[JENKINS] ${currentBuild.fullDisplayName}",
                  to: "chepurisaitejaswini@gmail.com",
-                 body: ‘’’<a href=”${BUILD_URL}input”>click to approve</a>’’’
+                 body: '''<a href="${BUILD_URL}input">click to approve</a>'''
             }
         }
         stage('Send off') {
