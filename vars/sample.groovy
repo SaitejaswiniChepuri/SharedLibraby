@@ -16,6 +16,7 @@ def call(String name = 'human') {
         stage('Speaking') {
             steps {
                 echo 'How are you....!'
+                input message: 'Do you want to approve the deployment?', ok: 'Yes'
             }
         }
         stage('Send off') {
