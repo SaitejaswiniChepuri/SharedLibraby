@@ -17,12 +17,10 @@ def call(String name = 'human') {
             steps {
                 echo 'How are you....!'
                 // input message: 'Do you want to approve the deployment?', ok: 'Yes'
-                 steps {
                  emailext mimeType: 'text/html',
                  subject: "APPROVAL RQD[JENKINS] ${currentBuild.fullDisplayName}",
                  to: "chepurisaitejaswini@gmail.com",
                  body: '''<a href="${BUILD_URL}input">click to approve</a>'''
-            }
             }
         
         }
