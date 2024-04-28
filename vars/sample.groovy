@@ -2,7 +2,7 @@
 
 def call(){
     node('python 3.8'){
-        def date = new Date.parse("MMM dd HH:mm:ss yyyy zzz", "Oct  5 09:16L54 2023 GMT")
+        def date = new Date().parse("MMM dd HH:mm:ss yyyy zzz", "Oct  5 09:16L54 2023 GMT")
         print(date)
     }
 }
