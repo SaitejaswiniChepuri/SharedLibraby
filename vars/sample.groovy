@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(){
-    node('python 3.8'){
+    node('python-3.8'){
         def date = new Date().parse("MMM dd HH:mm:ss yyyy zzz", "Oct  5 09:16L54 2023 GMT")
         print(date)
     }
